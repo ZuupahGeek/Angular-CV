@@ -1,8 +1,8 @@
-<div class="col card-layout">
+<div class="col card-layout" *ngIf="occupation">
   <div class="card-text">
-    <h3>arbete</h3>
-  <h5>Arbetsplats</h5>
-  <p>beskrivning</p>
+    <h3>{{ occupation.title }}</h3>
+  <h5>{{occupation.place}} <span>{{occupation.date}}</span></h5>
+  <p>{{occupation.desc}}</p>
   </div>
   
 </div>

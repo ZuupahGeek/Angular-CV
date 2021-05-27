@@ -9,6 +9,9 @@ import { UtbildningComponent } from './views/utbildning/utbildning.component';
 import { HobbyComponent } from './views/hobby/hobby.component';
 import { KontaktComponent } from './views/kontakt/kontakt.component';
 import { InfoCardsComponent } from './components/info-cards/info-cards.component';
+import { StoreModule } from '@ngrx/store';
+import { EducationReducer } from './store/reducers/education.reducer';
+import { WorkReducer } from './store/reducers/work.reducer';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,11 @@ import { InfoCardsComponent } from './components/info-cards/info-cards.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({
+      education: EducationReducer,
+      work: WorkReducer
+    }, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

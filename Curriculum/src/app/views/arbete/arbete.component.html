@@ -1,8 +1,7 @@
 <div class="container">
   <div class="row row-cols-1 row-cols-md-3 ">
-    <app-info-cards></app-info-cards>
-    <app-info-cards></app-info-cards>
-    <app-info-cards></app-info-cards>
+    <app-info-cards *ngFor="let occupation of work | async" [occupation]="occupation"></app-info-cards>
+   
   </div>
 
 
