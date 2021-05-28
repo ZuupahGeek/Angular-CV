@@ -1,1 +1,81 @@
-<p>kontakt works!</p>
+
+<div class="container mt-5">
+
+    <form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)" class="row">
+
+      <div class="mb-3 col-6">
+        <label for="name">Name</label>
+        <input 
+        type="text" 
+        id="name" 
+        class="form-control" 
+        #name="ngModel" 
+        [(ngModel)]="emailMessage.name" 
+        name="name"
+        required
+        >
+        <div class="text-danger" *ngIf="!name.valid && name.touched">
+          <small>Du måste skriva ditt namn</small>
+        </div>
+      </div>
+      
+
+      <div class="mb-3 col-6">
+        <label for="email">Email</label>
+        <input 
+        type="email" 
+        id="email" 
+        class="form-control" 
+        #email="ngModel" 
+        [(ngModel)]="emailMessage.email" 
+        name="email"
+        required
+        pattern="^\S{1,}@\S{2,}\.\S{2,}$"
+        >
+        <div class="text-danger" *ngIf="!email.valid && email.touched">
+          <small *ngIf="email.errors?.required">Du måste fylla i din Email</small>
+          <small *ngIf="email.errors?.pattern">Fyll i en riktig Email!</small>
+        </div>
+      </div>
+      
+      
+      <div class="mb-3">
+        <label for="subject">Ämne</label>
+        <input 
+        type="text" 
+        id="subject" 
+        class="form-control" 
+        #subject="ngModel" 
+        [(ngModel)]="emailMessage.subject" 
+        name="subject"
+        required
+        >
+        <div class="text-danger" *ngIf="!subject.valid && subject.touched">
+          <small>Du måste skriva in ett ämne</small>
+        </div>
+      </div>
+      
+      
+      <div class="mb-3">
+        <label for="message">Meddelande</label>
+        <input 
+        type="text" 
+        id="message" 
+        class="form-control" 
+        #message="ngModel" 
+        [(ngModel)]="emailMessage.message" 
+        name="message"
+        required
+        >
+        <div class="text-danger" *ngIf="!message.valid && message.touched">
+          <small>Du måste skriva ett meddelande</small>
+        </div>
+      </div>
+      
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-send col-2" [disabled]="!messageForm.valid">Skicka</button>
+      </div>
+      
+
+    </form>
+</div>

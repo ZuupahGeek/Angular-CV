@@ -5,7 +5,11 @@
   background-color: #231f19;
   color: #fae9cc;
   height: 100px;
-  margin-top: 3rem;
+  margin-top: 4rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 .footer a {
   margin: 1rem;

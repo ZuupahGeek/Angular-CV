@@ -14,6 +14,7 @@ import { EducationReducer } from './store/reducers/education.reducer';
 import { WorkReducer } from './store/reducers/work.reducer';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HomeComponent } from './views/home/home.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     StoreModule.forRoot({
       education: EducationReducer,
