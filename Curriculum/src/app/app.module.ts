@@ -12,6 +12,8 @@ import { InfoCardsComponent } from './components/info-cards/info-cards.component
 import { StoreModule } from '@ngrx/store';
 import { EducationReducer } from './store/reducers/education.reducer';
 import { WorkReducer } from './store/reducers/work.reducer';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './views/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { WorkReducer } from './store/reducers/work.reducer';
     UtbildningComponent,
     HobbyComponent,
     KontaktComponent,
-    InfoCardsComponent
+    InfoCardsComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

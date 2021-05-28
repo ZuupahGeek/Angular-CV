@@ -1,6 +1,5 @@
 .card-layout {
-  display: flex;
-  justify-content: center;
+ 
  
   border-radius: 15px;
   background-color: #231f19;
@@ -8,7 +7,7 @@
   box-shadow: #cd9934 7px 7px;
   width: 280px;
   margin-top:2rem;
-  height: 400px;
+  /* min-height: 100px; */
 }
 .card-text {
   color: #fae9cc;
@@ -16,5 +15,8 @@
 .card-text h3 {
   
   font-family: Blastrick Normal;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+.card-text small {
+  font-size: .8rem;
 }

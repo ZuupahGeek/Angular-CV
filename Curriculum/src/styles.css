@@ -8,4 +8,12 @@
 
 body {
   background-color: #3d362c;
+  color: #fae9cc;
+}
+
+:root{
+  --newblack: #231f19;
+  --newgray: #3d362c;
+  --meworange: #cd9934;
+  --newwhite: #fae9cc;
 }
